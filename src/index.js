@@ -20,6 +20,10 @@ app.use((req, res, next) => {
   next()
 })
 
+app.get('/', (req, res) => {
+  res.send('Working')
+})
+
 app.get('/generate', async (req, res) => {
   const { link, color1, color2, width, margin, pattern } = req.query
 
